@@ -5,7 +5,7 @@ function App() {
   return (
     <main className='container'>
       <header>
-        <h1>toDo Lite</h1>
+        <h1>DoLi</h1>
       </header>
       <section>
         <List />

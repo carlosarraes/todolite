@@ -11,11 +11,10 @@ $radius: .25rem;
 }
 
 body{
+  overflow: hidden;
   background-color: $background;
   font-family: 'IBM Plex Mono', monospace;
-  height: 100%;
-  display: grid;
-  justify-content: center;
+  height: 100vh;
 }
 
 h1{
@@ -25,20 +24,19 @@ h1{
 }
 
 .container{
-  width: 540px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: $radius;
   background-color: white;
 }
 
-.form{
+.list--form{
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 0 20px 0;
 }
 
-.form input{
+.list--form input{
   border-style: none;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -47,11 +45,85 @@ h1{
   color: $tertiary
 }
 
-.form button{
+.list--form button{
   background-color: $secondary;
   border: none;
   padding: 5px 5px;
   color: $primary;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.list--data{
+  display: flex;
+  justify-content: space-between;
+  gap: 50%;
+}
+
+.list--item{
+  text-transform: capitalize;
+}
+
+.list--items{
+  margin-top: 1em;
+}
+
+.list--control{
+  cursor: pointer;
+  display: flex;
+  gap: 0.5em;
+}
+
+.list--cbtn{
+  font-size: 1em;
+}
+
+.list--clear{
+  display: flex;
+  margin-top: 15px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list--clear button{
+  margin: 20px 0 10px 0;
+  padding: 4px 20px;
+  background: #dc3545;
+  border: none;
+  color: $background;
+  border-radius: 4px;
+}
+
+.notdone{
+  text-decoration: none;
+}
+
+.done {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.red{
+  color:#dc3545;
+}
+
+.green{
+  color: #28a745;
+}
+
+.blue{
+  color: #007bff;
+}
+
+hr{
+  color: $primary;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.list--line{
+  color: $secondary;
+  align-self: center;
+  width: 80%;
 }
